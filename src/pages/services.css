@@ -7,3 +7,16 @@
 .servicepage{
     height: 1200px;
 }
+
+
+@media (max-width: 768px){
+    .servicepage>div{
+        /* height: 600px; */
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .servicepage{
+        min-height: 1500px;
+    }
+}
+

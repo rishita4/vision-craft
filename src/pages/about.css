@@ -1,34 +1,25 @@
-.about{
+.about {
     width: 100%; 
-    height:800px;   
-    /* border: solid 2px black; */
+    min-height: 800px; 
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     background-color: #F8FBF8;
     color: #012840;
-    padding-top: 20px;
+    padding: 20px; /* Adds responsive padding */
+    box-sizing: border-box; /* Ensures padding doesn't add to the width */
 }
 
-.abouttop{
-    width: 80%;
-    /* border: solid 2px red; */
-    height: 200px;
+.abouttop, .aboutmiddle, .aboutbottom {
+    width: 90%; /* Adjust width for smaller screens */
+    min-height: 200px; 
     display: flex;
     background-color: #F8FBF8;
     color: #012840;
     box-shadow: 4px 4px 7px 2px rgba(0, 0, 0, 0.515);
-}
-
-.aboutmiddle{
-    width: 80%;
-    /* border: solid 2px red; */
-    height: 200px;
-    display: flex;
-    background-color: #F8FBF8;
-    color: #012840;
-    box-shadow: 4px 4px 7px 2px rgba(0, 0, 0, 0.515);
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    margin-top: 0px;
 }
 
 .atext{
@@ -46,38 +37,62 @@
     align-items: center;
 }
 
-.ptext{
-    padding: 25px;
+
+
+.ptext {
+    padding: 10px; /* Adjust padding for smaller screens */
     box-sizing: border-box;
     text-align: justify;
 }
 
-
-
-.imagediv{
-    width: 80%;
-    /* border: solid 2px brown; */
-    height: 80%;
+.imagediv {
+    width: 100%; /* Make image div adapt to parent width */
+    height: auto;
 }
 
-.imagediv img{
-    height: 100%;
+.imagediv img {
     width: 100%;
+    height: auto; /* Maintain aspect ratio */
 }
 
-.aboutbottom{
-    width: 80%;
-    height: 170px;
-    /* border: solid 2px yellow; */
-    box-shadow: 4px 4px 7px 2px rgba(0, 0, 0, 0.515);
-}
-
-.aboutbottom p{
-    padding: 20px;
+.aboutbottom p {
+    padding: 10px;
     box-sizing: border-box;
-    padding-top: 10px;
-    /* box-shadow: 4px 4px 7px 2px rgba(0, 0, 0, 0.515); */
+    text-align: justify;
 }
 
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .about {
+        padding: 10px;
+    }
 
+    .abouttop, .aboutmiddle, .aboutbottom {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center content */
+    }
 
+    .atext, .aimg {
+        width: 100%; /* Full width for stacked layout */
+    }
+
+    .ptext {
+        text-align: justify;
+        padding: 10px;
+    }
+}
+
+/* Media Query for Extra Small Screens */
+@media (max-width: 480px) {
+    .about {
+        padding: 5px;
+    }
+
+    .abouttop, .aboutmiddle, .aboutbottom {
+        box-shadow: none; /* Remove shadow for simpler design */
+    }
+
+    .atext, .aimg {
+        padding: 5px;
+    }
+}
