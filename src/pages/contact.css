@@ -1,0 +1,84 @@
+.contact{
+    width: 100%;
+    height: 500px;
+    /* border: solid 2px black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: column;  
+    background-color: #F8FBF8;
+    color: #012840;
+}
+
+.chead{
+    width: 100%;
+    height: 20%;
+    /* border: solid 2px red; */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-decoration: underline;
+    
+}
+
+.chead h1{
+    font-weight: 800;
+}
+
+
+
+
+.form{
+    width: 85%;
+    height: 70%;
+    /* border: solid 2px yellow; */
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formbox{
+    box-shadow: 3px 3px 5px 1px rgba(10, 10, 10, 0.303) ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 27%;
+    height: 100%;
+    border-radius: 10px;
+    
+}
+
+.forminput{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    
+}
+
+.forminput label{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.forminput input{
+    /* border: solid 2px greenyellow; */
+    height: 2em;
+    border-radius: 5px;
+}
+
+.formbox button{
+    /* color: blue; */
+    height: 2.4em;
+    width: 60%;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 1px rgba(10, 10, 10, 0.303) ;
+}
+
+.submitbutton1{
+    color: #F8FBF8;
+    background-color:#012840;
+}
+

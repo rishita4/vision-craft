@@ -1,0 +1,33 @@
+.wrapper{
+    display: flex;
+    background-color: #012840;
+    /* border: solid 2px black; */
+    height: 300px;
+    /* position: relative; */
+    justify-content: space-around;
+    align-items: center;
+    color: #F8FBF8;
+}
+
+.boxes{
+
+    /* background: red; */
+    height: 250px;
+    /* border: solid 2px black; */
+    width: 20%;
+
+    /* padding: 20px; */
+}
+
+ul{
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+}
+
+h3{
+    padding: 20px;
+    font-weight: 400;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+}
