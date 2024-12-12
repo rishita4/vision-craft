@@ -1,36 +1,90 @@
-#servicewrapper{
+#servicewrapper {
     background-color: #F8FBF8 !important;
-    height: 500px;
-    padding: 20px;
-    /* margin-left: 40px; */
-    padding-left: 70px;
-    padding-right: 70px;
+    padding: 20px 70px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center;
+    align-items: stretch; /* Ensure items stretch equally */
+    gap: 20px; /* Consistent spacing between items */
 }
 
-.servicefooter{
-    width: 20%;
-    /* border: solid 2px black; */
-    background-color: #F8FBF8 ;
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+.servicefooter {
+    width: calc(25% - 20px); /* Fit four items per row with gaps */
+    background-color: #F8FBF8;
     padding: 20px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Include padding and border in width/height */
     color: #012840;
     box-shadow: 4px 4px 7px 2px rgba(0, 0, 0, 0.515);
-    height: 260px;
-    /* background-color: aqua; */
     border-radius: 5px;
+    text-align: center; /* Center text inside box */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Maintain spacing between elements */
+    word-wrap: break-word; /* Handle long words without overflow */
+    overflow: hidden; /* Ensure no overflow from the box */
+    height: auto; /* Adjust height dynamically */
+    min-height: 260px; /* Set a consistent minimum height */
 }
 
+.servicefooter h3 {
+    margin: 0 0 10px 0; /* Remove top and side margins */
+    font-size: 1.5rem; /* Adjust heading size */
+    line-height: 1.2; /* Add line height for readability */
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Handle long text gracefully */
+    white-space: normal; /* Allow wrapping of long text */
+}
 
-
-p{
-
-
+.servicefooter p {
     color: #012840;
-    font-size: larger;
+    font-size: 1rem;
+    line-height: 1.5; /* Improve readability */
+    margin: 0; /* Remove default margins */
+    word-wrap: break-word; /* Prevent long words from breaking layout */
+    overflow: hidden; /* Prevent content overflow */
+    text-overflow: ellipsis;
 }
 
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    #servicewrapper {
+        padding: 20px 40px;
+        gap: 15px;
+    }
 
+    .servicefooter {
+        width: calc(33.33% - 20px); /* 3 items per row */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #servicewrapper {
+        padding: 20px 20px;
+        gap: 10px;
+    }
+
+    .servicefooter {
+        width: calc(50% - 20px); /* 2 items per row */
+        min-height: auto; /* Allow flexible height */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #servicewrapper {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .servicefooter {
+        width: 100%; /* Full width for single-column layout */
+        padding: 15px; /* Compact padding */
+    }
+
+    .servicefooter h3 {
+        font-size: 1rem; /* Slightly smaller heading for mobile */
+    }
+
+    .servicefooter p {
+        font-size: 0.9rem; /* Reduce paragraph font size */
+    }
+}
